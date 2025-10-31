@@ -1,0 +1,71 @@
+/* Cores inspiradas na bandeira de Moçambique */
+:root{
+  --verde: #006a4e;
+  --amarelo: #fcd116;
+  --preto: #000000;
+  --vermelho: #ce1126;
+  --bg: #ffffff;
+  --muted: #666666;
+}
+
+*{box-sizing:border-box}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;line-height:1.5;margin:0;background:var(--bg);color:#111}
+
+/* Top nav fixo */
+.topnav{position:fixed;top:0;left:0;right:0;height:64px;background:linear-gradient(90deg,var(--verde),var(--vermelho));display:flex;align-items:center;justify-content:space-between;padding:0 20px;color:#fff;z-index:1000}
+.topnav .brand{font-weight:700;font-size:1.15rem}
+.topnav nav a{color: #fff;text-decoration:none;margin-left:18px;font-weight:600}
+.topnav nav a:hover{opacity:0.9;text-decoration:underline}
+
+/* Espaço para o header fixo */
+.container{max-width:1100px;margin:104px auto;padding:24px}
+.container.small{max-width:700px;margin:104px auto;padding:24px}
+
+/* Hero */
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center}
+.hero-text h1{font-size:2rem;margin:0 0 12px}
+.hero-text p{margin:8px 0}
+.hero-image img{width:100%;height:320px;object-fit:cover;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.12)}
+
+.btn{display:inline-block;background:var(--amarelo);color:var(--preto);padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:700;border:2px solid rgba(0,0,0,0.06)}
+.btn.outline{background:transparent;color:#fff;border:2px solid rgba(255,255,255,0.6)}
+
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
+.features article{background:#fff;padding:18px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);text-align:center}
+
+/* Menu */
+.page-title{font-size:1.6rem;color:var(--verde);margin-bottom:18px}
+.menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.menu-card{background:#fff;padding:12px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
+.menu-card img{width:100%;height:160px;object-fit:cover;border-radius:8px}
+.menu-card h4{margin:10px 0 6px}
+.menu-card p{margin:0 0 8px;color:var(--muted)}
+.price{font-weight:800;color:var(--vermelho)}
+
+/* Sobre */
+.about{display:grid;grid-template-columns:1fr 320px;gap:18px;align-items:start}
+.about-images img{width:100%;height:160px;object-fit:cover;border-radius:8px;margin-bottom:8px}
+
+/* Formulário reservas */
+.reserva-form{display:grid;gap:10px;background:#fff;padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
+.reserva-form label{font-weight:600}
+.reserva-form input{padding:10px;border-radius:8px;border:1px solid #ddd}
+.reserva-form button{margin-top:6px}
+
+/* Footer e créditos */
+.mini-footer{background:#fafafa;padding:12px;text-align:center;color:var(--muted);margin-top:36px}
+.credits{margin-top:18px;padding:12px;color:var(--muted);font-size:0.95rem}
+
+/* Responsivo */
+@media (max-width:880px){
+  .hero{grid-template-columns:1fr}
+  .about{grid-template-columns:1fr}
+  .features{grid-template-columns:1fr}
+  .topnav nav a{margin-left:12px}
+}
+
+@media (max-width:480px){
+  .topnav{padding:0 12px}
+  .brand{font-size:1rem}
+  .hero-image img{height:200px}
+}
